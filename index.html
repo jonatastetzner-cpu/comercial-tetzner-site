@@ -129,12 +129,17 @@ nav.scrolled .nav-tab:hover{background:rgba(0,0,0,.06);color:var(--escuro);}
 .parceiros-head h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4.4vw,54px);font-weight:700;color:white;line-height:1.05;max-width:620px;}
 .parceiros-head h2 em{color:var(--laranja);font-style:italic;}
 .parceiros-head p{max-width:430px;color:rgba(255,255,255,.72);font-size:15px;line-height:1.75;}
-.parceiros-grid{display:grid;grid-template-columns:minmax(0,760px);gap:22px;}
+.parceiros-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;}
 .partner-panel{background:rgba(244,250,238,.08);border:1px solid rgba(244,250,238,.16);border-radius:8px;padding:26px;}
 .partner-panel h3{font-family:'Inter',sans-serif;color:white;font-size:20px;font-weight:700;margin-bottom:8px;}
 .partner-panel>p{color:rgba(255,255,255,.68);font-size:14px;line-height:1.65;margin-bottom:22px;}
-.partner-slots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
-.partner-slot{height:92px;border:1px dashed rgba(244,250,238,.24);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.52);font-size:13px;background:rgba(244,250,238,.045);text-align:center;padding:12px;}
+.client-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+.client-card{display:grid;grid-template-columns:142px 1fr;gap:18px;align-items:center;min-height:132px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:16px;}
+.client-logo{height:86px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;padding:13px;box-shadow:0 12px 26px rgba(0,0,0,.12);}
+.client-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block;}
+.client-card h4{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;color:white;margin-bottom:5px;}
+.client-card p{color:rgba(255,255,255,.72);font-size:13px;line-height:1.5;margin-bottom:10px;}
+.client-tag{display:inline-flex;align-items:center;width:max-content;max-width:100%;min-height:28px;border-radius:999px;background:rgba(244,185,66,.12);border:1px solid rgba(244,185,66,.22);color:#f4b942;font-size:12px;font-weight:800;line-height:1.25;padding:6px 10px;}
 .partner-note{margin-top:18px;color:rgba(255,255,255,.58);font-size:13px;line-height:1.6;}
 #pg-parceiros footer{background:#102f1d;border-top:1px solid rgba(255,255,255,.1);}
 #pg-parceiros footer .fsoc span{color:rgba(255,255,255,.42);}
@@ -190,7 +195,9 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
   .parceiros-head{display:block;}
   .parceiros-head p{margin-top:16px;}
   .parceiros-grid{grid-template-columns:1fr;}
-  .partner-slots{grid-template-columns:1fr;}
+  .client-grid{grid-template-columns:1fr;}
+  .client-card{grid-template-columns:1fr;gap:13px;align-items:start;}
+  .client-logo{width:160px;max-width:100%;height:74px;padding:10px;}
 }
 </style>
 </head>
@@ -462,20 +469,56 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
       <div class="parceiros-wrap">
         <div class="parceiros-head">
           <h2>Clientes que fazem parte da nossa <em>hist&oacute;ria</em>.</h2>
-          <p>Espa&ccedil;o preparado para destacar redes, mercados e compradores atendidos pela Comercial Tetzner.</p>
+          <p>Redes e mercados atendidos pela Comercial Tetzner, com presen&ccedil;a em regi&otilde;es importantes do estado.</p>
         </div>
 
         <div class="parceiros-grid">
           <div class="partner-panel">
             <h3>Clientes</h3>
-            <p>&Aacute;rea reservada para redes, mercados, distribuidores e compradores atendidos pela Tetzner.</p>
-            <div class="partner-slots">
-              <div class="partner-slot">Adicionar cliente</div>
-              <div class="partner-slot">Adicionar cliente</div>
-              <div class="partner-slot">Adicionar cliente</div>
-              <div class="partner-slot">Adicionar cliente</div>
+            <p>Alguns dos mercados e redes que fazem parte da nossa rotina comercial.</p>
+            <div class="client-grid">
+              <article class="client-card">
+                <div class="client-logo">
+                  <img src="assets/images/clients/semar-logo.png" alt="Semar Supermercados">
+                </div>
+                <div>
+                  <h4>Semar</h4>
+                  <p>Rede supermercadista paulista com unidades em cidades estrat&eacute;gicas do estado.</p>
+                  <span class="client-tag">27 lojas</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo">
+                  <img src="assets/images/clients/piratininga-logo.png" alt="Mercadinho Piratininga">
+                </div>
+                <div>
+                  <h4>Rede Piratininga</h4>
+                  <p>Opera no Vale do Para&iacute;ba, Mantiqueira e litoral norte, com supermercados e drogarias.</p>
+                  <span class="client-tag">6 lojas</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo">
+                  <img src="assets/images/clients/silva-indaia-logo.png" alt="Supermercado Silva Indai&aacute;">
+                </div>
+                <div>
+                  <h4>Silva Indai&aacute;</h4>
+                  <p>Supermercado em Caraguatatuba/SP, com atendimento local e venda por e-commerce.</p>
+                  <span class="client-tag">Litoral norte</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo">
+                  <img src="assets/images/clients/tauste-logo.svg" alt="Tauste Supermercados">
+                </div>
+                <div>
+                  <h4>Tauste</h4>
+                  <p>Rede de supermercados com lojas em polos do interior paulista.</p>
+                  <span class="client-tag">11 lojas</span>
+                </div>
+              </article>
             </div>
-            <div class="partner-note">Quando quiser, podemos trocar estes espa&ccedil;os por logotipos, nomes ou uma lista filtrada por regi&atilde;o.</div>
+            <div class="partner-note">Lista inicial de clientes para valida&ccedil;&atilde;o visual; novos logos podem ser inclu&iacute;dos conforme prioridade comercial.</div>
           </div>
 
         </div>
