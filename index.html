@@ -125,18 +125,16 @@ nav.scrolled .nav-tab:hover{background:rgba(0,0,0,.06);color:var(--escuro);}
 /* PARCEIROS */
 .parceiros-section{background:linear-gradient(180deg,#173f25 0%,#102f1d 100%);min-height:calc(100vh - 104px);padding:88px 56px;}
 .parceiros-wrap{max-width:1180px;margin:0 auto;}
-.parceiros-head{display:flex;justify-content:space-between;gap:34px;align-items:flex-end;margin-bottom:34px;}
+.parceiros-head{display:block;margin-bottom:34px;}
 .parceiros-head h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4.4vw,54px);font-weight:700;color:white;line-height:1.05;max-width:620px;}
 .parceiros-head h2 em{color:var(--laranja);font-style:italic;}
-.parceiros-head p{max-width:430px;color:rgba(255,255,255,.72);font-size:15px;line-height:1.75;}
 .parceiros-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;}
 .partner-panel{background:rgba(244,250,238,.08);border:1px solid rgba(244,250,238,.16);border-radius:8px;padding:26px;}
-.partner-panel h3{font-family:'Inter',sans-serif;color:white;font-size:20px;font-weight:700;margin-bottom:8px;}
-.partner-panel>p{color:rgba(255,255,255,.68);font-size:14px;line-height:1.65;margin-bottom:22px;}
 .client-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
 .client-card{display:grid;grid-template-columns:142px 1fr;gap:18px;align-items:center;min-height:132px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:16px;}
 .client-logo{height:86px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;padding:13px;box-shadow:0 12px 26px rgba(0,0,0,.12);}
 .client-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block;}
+.client-logo-text{background:linear-gradient(135deg,#fff 0%,#f5f0e7 100%);color:#173f25;font-family:'Inter',sans-serif;font-size:15px;font-weight:900;line-height:1.1;text-align:center;text-transform:uppercase;letter-spacing:0;}
 .client-card h4{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;color:white;margin-bottom:5px;}
 .client-card p{color:rgba(255,255,255,.72);font-size:13px;line-height:1.5;margin-bottom:10px;}
 .client-tag{display:inline-flex;align-items:center;width:max-content;max-width:100%;min-height:28px;border-radius:999px;background:rgba(244,185,66,.12);border:1px solid rgba(244,185,66,.22);color:#f4b942;font-size:12px;font-weight:800;line-height:1.25;padding:6px 10px;}
@@ -145,13 +143,8 @@ nav.scrolled .nav-tab:hover{background:rgba(0,0,0,.06);color:var(--escuro);}
 .ceasa-card p{color:rgba(255,255,255,.76);font-size:14px;line-height:1.7;}
 .ceasa-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
 .ceasa-stat{background:rgba(10,34,20,.42);border:1px solid rgba(255,255,255,.13);border-radius:8px;padding:14px;}
-.ceasa-stat strong{display:block;color:#f4b942;font-size:20px;line-height:1.1;margin-bottom:5px;}
+.ceasa-stat strong{display:block;color:#f4b942;font-size:20px;line-height:1.15;margin-bottom:5px;}
 .ceasa-stat span{display:block;color:rgba(255,255,255,.72);font-size:12px;line-height:1.45;}
-.regional-block{margin-top:24px;}
-.regional-block h4{font-family:'Inter',sans-serif;color:white;font-size:17px;font-weight:800;margin-bottom:8px;}
-.regional-block p{color:rgba(255,255,255,.66);font-size:13px;line-height:1.65;margin-bottom:14px;}
-.regional-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;}
-.regional-client{min-height:48px;display:flex;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:8px;color:rgba(255,255,255,.9);font-size:13px;font-weight:700;line-height:1.3;padding:10px 12px;}
 .partner-note{margin-top:18px;color:rgba(255,255,255,.58);font-size:13px;line-height:1.6;}
 #pg-parceiros footer{background:#102f1d;border-top:1px solid rgba(255,255,255,.1);}
 #pg-parceiros footer .fsoc span{color:rgba(255,255,255,.42);}
@@ -204,8 +197,6 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
   .nav-tabs{display:none;}
   .pgrid{grid-template-columns:1fr;}
   .frow{grid-template-columns:1fr;}
-  .parceiros-head{display:block;}
-  .parceiros-head p{margin-top:16px;}
   .parceiros-grid{grid-template-columns:1fr;}
   .client-grid{grid-template-columns:1fr;}
   .client-card{grid-template-columns:1fr;gap:13px;align-items:start;}
@@ -213,8 +204,6 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
   .ceasa-card{grid-template-columns:1fr;padding:20px;gap:16px;}
   .ceasa-card h4{font-size:25px;}
   .ceasa-stats{grid-template-columns:1fr;}
-  .regional-list{grid-template-columns:1fr;}
-  .regional-client{min-height:44px;}
 }
 </style>
 </head>
@@ -485,14 +474,11 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
     <section class="parceiros-section">
       <div class="parceiros-wrap">
         <div class="parceiros-head">
-          <h2>Clientes que fazem parte da nossa <em>hist&oacute;ria</em>.</h2>
-          <p>Redes e mercados atendidos pela Comercial Tetzner, com presen&ccedil;a em regi&otilde;es importantes do estado.</p>
+          <h2>Alguns clientes que fazem parte da nossa <em>hist&oacute;ria</em>.</h2>
         </div>
 
         <div class="parceiros-grid">
           <div class="partner-panel">
-            <h3>Clientes</h3>
-            <p>Alguns dos mercados e redes que fazem parte da nossa rotina comercial.</p>
             <div class="client-grid">
               <article class="client-card">
                 <div class="client-logo">
@@ -534,46 +520,137 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
                   <span class="client-tag">11 lojas</span>
                 </div>
               </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">SMC<br>Cruzeiro</div>
+                <div>
+                  <h4>SMC Supermercado Cruzeiro</h4>
+                  <p>Supermercado de S&atilde;o Jos&eacute; dos Campos, com atua&ccedil;&atilde;o no varejo alimentar regional.</p>
+                  <span class="client-tag">S&atilde;o Jos&eacute; dos Campos</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Dia<br>Mais</div>
+                <div>
+                  <h4>Supermercado Dia Mais</h4>
+                  <p>Rede do litoral norte, com presen&ccedil;a em Caraguatatuba e S&atilde;o Sebasti&atilde;o.</p>
+                  <span class="client-tag">Litoral norte</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Super<br>RND</div>
+                <div>
+                  <h4>Super RND</h4>
+                  <p>Supermercado de Taubat&eacute;, com varejo, padaria e hortifr&uacute;ti na rotina de atendimento.</p>
+                  <span class="client-tag">Taubat&eacute;</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Gima<br>Mercados</div>
+                <div>
+                  <h4>Gima Mercados</h4>
+                  <p>Mercado regional do litoral norte, atendido pela opera&ccedil;&atilde;o comercial da Tetzner.</p>
+                  <span class="client-tag">Litoral norte</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Mercado<br>Rocha</div>
+                <div>
+                  <h4>Mercado Rocha</h4>
+                  <p>Mercado regional com abastecimento de hortifr&uacute;ti para o varejo local.</p>
+                  <span class="client-tag">Varejo regional</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Mercaz&atilde;o</div>
+                <div>
+                  <h4>Supermercado Mercaz&atilde;o</h4>
+                  <p>Supermercado de Taubat&eacute;, com compras recorrentes para atendimento ao consumidor final.</p>
+                  <span class="client-tag">Taubat&eacute;</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Maneiro</div>
+                <div>
+                  <h4>Supermercado Maneiro</h4>
+                  <p>Supermercado regional de Taubat&eacute;, atendido dentro da rota do Vale do Para&iacute;ba.</p>
+                  <span class="client-tag">Vale do Para&iacute;ba</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Itamb&eacute;</div>
+                <div>
+                  <h4>Supermercado Itamb&eacute;</h4>
+                  <p>Cliente do varejo alimentar, com abastecimento voltado a frutas e hortifr&uacute;ti selecionado.</p>
+                  <span class="client-tag">Varejo alimentar</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Quitanda<br>Izu</div>
+                <div>
+                  <h4>Quitanda Izu</h4>
+                  <p>Quitanda em Ubatuba, especializada em produtos frescos para o consumidor local.</p>
+                  <span class="client-tag">Ubatuba</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">DePenido</div>
+                <div>
+                  <h4>Supermercado DePenido</h4>
+                  <p>Supermercado de Santa Gertrudes, atendido pela opera&ccedil;&atilde;o comercial do interior paulista.</p>
+                  <span class="client-tag">Interior paulista</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Bols&atilde;o<br>Cereais</div>
+                <div>
+                  <h4>Supermercado Bols&atilde;o Cereais</h4>
+                  <p>Supermercado de Limeira, pr&oacute;ximo da matriz e parte da base regional de atendimento.</p>
+                  <span class="client-tag">Limeira</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Furkin</div>
+                <div>
+                  <h4>Supermercado Furkin</h4>
+                  <p>Supermercado regional atendido na opera&ccedil;&atilde;o de abastecimento do interior paulista.</p>
+                  <span class="client-tag">Interior paulista</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Alto<br>Giro</div>
+                <div>
+                  <h4>Alto Giro Supermercados</h4>
+                  <p>Rede de Piracicaba com lojas em bairros estrat&eacute;gicos e atendimento varejista consolidado.</p>
+                  <span class="client-tag">Piracicaba</span>
+                </div>
+              </article>
+              <article class="client-card">
+                <div class="client-logo client-logo-text">Examine</div>
+                <div>
+                  <h4>Supermercado Examine</h4>
+                  <p>Supermercado de Ipe&uacute;na, com atua&ccedil;&atilde;o local e foco em qualidade no varejo.</p>
+                  <span class="client-tag">Ipe&uacute;na</span>
+                </div>
+              </article>
             </div>
 
             <div class="ceasa-card">
               <div>
                 <h4>CEAGESP S&atilde;o Jos&eacute; dos Campos</h4>
-                <p>Presen&ccedil;a no entreposto da CEAGESP em S&atilde;o Jos&eacute; dos Campos, atendendo feirantes, quitandas, varej&otilde;es, mercados e compradores recorrentes de hortifr&uacute;ti.</p>
+                <p>No entreposto da CEAGESP em S&atilde;o Jos&eacute; dos Campos, a Comercial Tetzner atende uma base ampla de compradores do setor de hortifr&uacute;ti, incluindo feirantes, quitandas, varej&otilde;es, mercados e clientes finais.</p>
               </div>
               <div class="ceasa-stats">
                 <div class="ceasa-stat">
-                  <strong>300+</strong>
-                  <span>clientes cadastrados no CEASA</span>
+                  <strong>Mais de 300</strong>
+                  <span>compradores recorrentes atendidos no entreposto de S&atilde;o Jos&eacute; dos Campos</span>
                 </div>
                 <div class="ceasa-stat">
-                  <strong>Direto</strong>
-                  <span>vendas tamb&eacute;m para consumidores finais</span>
+                  <strong>Atacado e varejo</strong>
+                  <span>abastecimento para o com&eacute;rcio regional e venda direta ao consumidor</span>
                 </div>
               </div>
             </div>
-
-            <div class="regional-block">
-              <h4>Clientes regionais e varejo especializado</h4>
-              <p>Lista organizada com os nomes comerciais identificados para redes, supermercados, mercados e quitandas atendidos pela Comercial Tetzner.</p>
-              <div class="regional-list">
-                <div class="regional-client">SMC Supermercado Cruzeiro</div>
-                <div class="regional-client">Supermercado Dia Mais</div>
-                <div class="regional-client">Super RND</div>
-                <div class="regional-client">Gima Mercados</div>
-                <div class="regional-client">Mercado Rocha</div>
-                <div class="regional-client">Supermercado Mercaz&atilde;o</div>
-                <div class="regional-client">Supermercado Maneiro</div>
-                <div class="regional-client">Supermercado Itamb&eacute;</div>
-                <div class="regional-client">Quitanda Izu</div>
-                <div class="regional-client">Supermercado DePenido</div>
-                <div class="regional-client">Supermercado Bols&atilde;o Cereais</div>
-                <div class="regional-client">Supermercado Furkin</div>
-                <div class="regional-client">Alto Giro Supermercados</div>
-                <div class="regional-client">Supermercado Examine</div>
-              </div>
-            </div>
-            <div class="partner-note">Novos logos podem ser inclu&iacute;dos conforme valida&ccedil;&atilde;o visual e prioridade comercial.</div>
+            <div class="partner-note">Esta &eacute; uma sele&ccedil;&atilde;o de clientes e frentes de atendimento; a carteira comercial &eacute; mais ampla e segue em atualiza&ccedil;&atilde;o.</div>
           </div>
 
         </div>
