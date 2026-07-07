@@ -131,9 +131,11 @@ nav.scrolled .nav-tab:hover{background:rgba(0,0,0,.06);color:var(--escuro);}
 .parceiros-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;}
 .partner-panel{background:rgba(244,250,238,.08);border:1px solid rgba(244,250,238,.16);border-radius:8px;padding:26px;}
 .client-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
-.client-card{display:grid;grid-template-columns:142px 1fr;gap:18px;align-items:center;min-height:132px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:16px;}
-.client-logo{height:86px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;padding:13px;box-shadow:0 12px 26px rgba(0,0,0,.12);}
+.client-card{display:grid;grid-template-columns:170px 1fr;gap:18px;align-items:center;min-height:132px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:16px;}
+.client-logo{height:86px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;padding:10px;box-shadow:0 12px 26px rgba(0,0,0,.12);overflow:hidden;}
 .client-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block;}
+.client-logo.logo-tight{padding:5px;}
+.client-logo.logo-tight img{width:100%;height:100%;object-fit:contain;}
 .client-card h4{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;color:white;margin-bottom:5px;}
 .client-card p{color:rgba(255,255,255,.72);font-size:13px;line-height:1.5;margin-bottom:10px;}
 .client-tag{display:inline-flex;align-items:center;width:max-content;max-width:100%;min-height:28px;border-radius:999px;background:rgba(244,185,66,.12);border:1px solid rgba(244,185,66,.22);color:#f4b942;font-size:12px;font-weight:800;line-height:1.25;padding:6px 10px;}
@@ -520,11 +522,11 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
                 </div>
               </article>
               <article class="client-card">
-                <div class="client-logo"><img src="assets/images/clients/regional/smc-cruzeiro.jpg" alt="Logo SMC Supermercado Cruzeiro"></div>
+                <div class="client-logo logo-tight"><img src="assets/images/clients/regional/cruzero.png" alt="Logo Mercado Cruzero"></div>
                 <div>
-                  <h4>SMC Supermercado Cruzeiro</h4>
-                  <p>Supermercado de S&atilde;o Jos&eacute; dos Campos, com atua&ccedil;&atilde;o no varejo alimentar regional.</p>
-                  <span class="client-tag">S&atilde;o Jos&eacute; dos Campos</span>
+                  <h4>Mercado Cruzero</h4>
+                  <p>Mercado de Caraguatatuba, no litoral norte, atendido pela rota comercial da Tetzner.</p>
+                  <span class="client-tag">Litoral norte</span>
                 </div>
               </article>
               <article class="client-card">
@@ -540,14 +542,14 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
                 <div>
                   <h4>Super RND</h4>
                   <p>Supermercado de Taubat&eacute;, com varejo, padaria e hortifr&uacute;ti na rotina de atendimento.</p>
-                  <span class="client-tag">Taubat&eacute;</span>
+                  <span class="client-tag">Vale do Para&iacute;ba</span>
                 </div>
               </article>
               <article class="client-card">
-                <div class="client-logo"><img src="assets/images/clients/regional/gima.jpg" alt="Logo Gima Mercados"></div>
+                <div class="client-logo"><img src="assets/images/clients/regional/gima.jpg" alt="Logo Gima Supermercados"></div>
                 <div>
-                  <h4>Gima Mercados</h4>
-                  <p>Mercado regional do litoral norte, atendido pela opera&ccedil;&atilde;o comercial da Tetzner.</p>
+                  <h4>Gima Supermercados</h4>
+                  <p>Supermercado regional do litoral norte, atendido pela opera&ccedil;&atilde;o comercial da Tetzner.</p>
                   <span class="client-tag">Litoral norte</span>
                 </div>
               </article>
@@ -560,15 +562,15 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
                 </div>
               </article>
               <article class="client-card">
-                <div class="client-logo"><img src="assets/images/clients/regional/mercazao.jpg" alt="Logo Supermercado Mercaz&atilde;o"></div>
+                <div class="client-logo logo-tight"><img src="assets/images/clients/regional/mercazao.png" alt="Logo Supermercado Mercaz&atilde;o"></div>
                 <div>
                   <h4>Supermercado Mercaz&atilde;o</h4>
                   <p>Supermercado de Taubat&eacute;, com compras recorrentes para atendimento ao consumidor final.</p>
-                  <span class="client-tag">Taubat&eacute;</span>
+                  <span class="client-tag">Vale do Para&iacute;ba</span>
                 </div>
               </article>
               <article class="client-card">
-                <div class="client-logo"><img src="assets/images/clients/regional/maneiro.jpg" alt="Logo Supermercado Maneiro"></div>
+                <div class="client-logo logo-tight"><img src="assets/images/clients/regional/maneiro.png" alt="Logo Supermercado Maneiro"></div>
                 <div>
                   <h4>Supermercado Maneiro</h4>
                   <p>Supermercado regional de Taubat&eacute;, atendido dentro da rota do Vale do Para&iacute;ba.</p>
@@ -576,11 +578,11 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
                 </div>
               </article>
               <article class="client-card">
-                <div class="client-logo"><img src="assets/images/clients/regional/itambe.jpg" alt="Logo Supermercado Itamb&eacute;"></div>
+                <div class="client-logo logo-tight"><img src="assets/images/clients/regional/itambe.png" alt="Logo Supermercado Itamb&eacute;"></div>
                 <div>
                   <h4>Supermercado Itamb&eacute;</h4>
                   <p>Cliente do varejo alimentar, com abastecimento voltado a frutas e hortifr&uacute;ti selecionado.</p>
-                  <span class="client-tag">Varejo alimentar</span>
+                  <span class="client-tag">Vale do Para&iacute;ba</span>
                 </div>
               </article>
               <article class="client-card">
@@ -588,7 +590,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
                 <div>
                   <h4>Quitanda Izu</h4>
                   <p>Quitanda em Ubatuba, especializada em produtos frescos para o consumidor local.</p>
-                  <span class="client-tag">Ubatuba</span>
+                  <span class="client-tag">Litoral norte</span>
                 </div>
               </article>
               <article class="client-card">
@@ -600,15 +602,15 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
                 </div>
               </article>
               <article class="client-card">
-                <div class="client-logo"><img src="assets/images/clients/regional/bolsao-cereais.jpg" alt="Logo Supermercado Bols&atilde;o de Cereais"></div>
+                <div class="client-logo logo-tight"><img src="assets/images/clients/regional/bolsao-cereais.png" alt="Logo Supermercado Bols&atilde;o de Cereais"></div>
                 <div>
                   <h4>Supermercado Bols&atilde;o Cereais</h4>
                   <p>Supermercado de Limeira, pr&oacute;ximo da matriz e parte da base regional de atendimento.</p>
-                  <span class="client-tag">Limeira</span>
+                  <span class="client-tag">Interior paulista</span>
                 </div>
               </article>
               <article class="client-card">
-                <div class="client-logo"><img src="assets/images/clients/regional/furkim.png" alt="Logo Supermercado Furkim"></div>
+                <div class="client-logo logo-tight"><img src="assets/images/clients/regional/furkim.png" alt="Logo Supermercado Furkim"></div>
                 <div>
                   <h4>Supermercado Furkim</h4>
                   <p>Supermercado regional atendido na opera&ccedil;&atilde;o de abastecimento do interior paulista.</p>
@@ -620,7 +622,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
                 <div>
                   <h4>Alto Giro Supermercados</h4>
                   <p>Rede de Piracicaba com lojas em bairros estrat&eacute;gicos e atendimento varejista consolidado.</p>
-                  <span class="client-tag">Piracicaba</span>
+                  <span class="client-tag">Interior paulista</span>
                 </div>
               </article>
               <article class="client-card">
@@ -628,7 +630,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
                 <div>
                   <h4>Supermercado Examine</h4>
                   <p>Supermercado de Ipe&uacute;na, com atua&ccedil;&atilde;o local e foco em qualidade no varejo.</p>
-                  <span class="client-tag">Ipe&uacute;na</span>
+                  <span class="client-tag">Interior paulista</span>
                 </div>
               </article>
             </div>
