@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Comercial Tetzner: beneficiamento e distribuição de citrus frescos e mangas para supermercados, varejões, quitandas e atacadistas em São Paulo.">
 <title>Comercial Tetzner – Beneficiadora e Distribuidora de Citrus</title>
 <script>window.D3_LOADED=false;</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -30,8 +31,10 @@ nav.scrolled .nav-tab{color:var(--escuro);}
 .nav-tab:hover{background:rgba(255,255,255,.15);color:white;}
 nav.scrolled .nav-tab:hover{background:rgba(0,0,0,.06);color:var(--escuro);}
 .nav-tab.on{background:var(--laranja)!important;color:white!important;box-shadow:none;}
-.nav-wpp{background:#22c866;color:white;padding:9px 18px;border-radius:50px;font-size:13px;font-weight:600;text-decoration:none;transition:background .2s,transform .2s;box-shadow:none;display:flex;align-items:center;gap:7px;}
-.nav-wpp:hover{background:#1fbd60;transform:translateY(-1px);}
+.nav-wpp{background:#25d366;color:white;padding:9px 18px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;transition:background .2s,transform .2s;box-shadow:none;display:flex;align-items:center;gap:8px;}
+.nav-wpp svg{width:17px;height:17px;display:block;flex-shrink:0;}
+.nav-wpp:hover{background:#1ebe5d;transform:translateY(-1px);}
+.nav-wpp:focus-visible{outline:3px solid rgba(37,211,102,.35);outline-offset:3px;}
 
 /* PAGES */
 .pg{display:none;}.pg.on{display:block;}
@@ -98,7 +101,8 @@ nav.scrolled .nav-tab:hover{background:rgba(0,0,0,.06);color:var(--escuro);}
 .pcard-body{padding:22px 24px;}
 .pcard-body h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:7px;color:var(--escuro);}
 .pcard-body p{font-size:13px;color:var(--cinza);line-height:1.65;margin-bottom:10px;}
-.pcard-link{display:flex;align-items:center;gap:5px;color:var(--verde2);font-size:13px;font-weight:600;cursor:pointer;transition:gap .25s;margin-top:14px;}
+.pcard-link{display:flex;align-items:center;gap:5px;color:var(--verde2);font-size:13px;font-weight:600;cursor:pointer;transition:gap .25s;margin-top:14px;background:transparent;border:0;padding:0;font-family:'DM Sans',sans-serif;text-align:left;}
+.pcard-link:focus-visible{outline:3px solid rgba(45,106,45,.25);outline-offset:4px;border-radius:4px;}
 .pcard:hover .pcard-link{gap:10px;}
 
 /* NÚMEROS */
@@ -136,7 +140,7 @@ nav.scrolled .nav-tab:hover{background:rgba(0,0,0,.06);color:var(--escuro);}
 .client-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block;}
 .client-logo.logo-tight{padding:5px;}
 .client-logo.logo-tight img{width:100%;height:100%;object-fit:contain;}
-.client-card h4{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;color:white;margin-bottom:5px;}
+.client-card h4{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:800;color:white;margin-bottom:5px;}
 .client-card p{color:rgba(255,255,255,.72);font-size:13px;line-height:1.5;margin-bottom:10px;}
 .client-tag{display:inline-flex;align-items:center;width:max-content;max-width:100%;min-height:28px;border-radius:999px;background:rgba(244,185,66,.12);border:1px solid rgba(244,185,66,.22);color:#f4b942;font-size:12px;font-weight:800;line-height:1.25;padding:6px 10px;}
 .ceasa-card{margin-top:18px;background:linear-gradient(135deg,rgba(244,185,66,.18),rgba(255,255,255,.07));border:1px solid rgba(244,185,66,.28);border-radius:8px;padding:24px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;}
@@ -174,6 +178,7 @@ nav.scrolled .nav-tab:hover{background:rgba(0,0,0,.06);color:var(--escuro);}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
 .btn-form{width:100%;padding:13px;border-radius:10px;border:none;background:var(--verde2);color:white;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .3s;margin-top:5px;}
 .btn-form:hover{background:var(--verde3);transform:translateY(-2px);box-shadow:0 7px 24px rgba(45,106,45,.35);}
+.privacy-note{font-size:11px;line-height:1.5;color:var(--cinza);margin-top:10px;}
 
 /* FOOTER */
 footer{background:var(--escuro);padding:30px 56px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.06);}
@@ -219,7 +224,10 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
     <button class="nav-tab"     onclick="go('parceiros',this)">Parceiros</button>
     <button class="nav-tab"     onclick="go('contato',this)">Contato</button>
   </div>
-  <a class="nav-wpp" href="https://wa.me/5519974117676" target="_blank">💬 WhatsApp</a>
+  <a class="nav-wpp" href="https://wa.me/5519974117676" target="_blank" rel="noopener" aria-label="Abrir WhatsApp da Comercial Tetzner">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2.5a9.43 9.43 0 0 0-8.07 14.32L3 21.5l4.8-1.26a9.42 9.42 0 1 0 4.24-17.74Zm5.52 13.48c-.23.64-1.33 1.22-1.87 1.3-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.13-4.88-4.32-.14-.19-1.17-1.55-1.17-2.96s.74-2.1 1-2.39c.26-.28.58-.35.77-.35h.56c.18.01.42-.07.66.5.25.6.84 2.06.91 2.2.07.14.12.31.02.5-.1.2-.15.32-.3.49-.14.17-.31.38-.44.51-.14.14-.29.29-.12.57.17.28.76 1.25 1.63 2.03 1.12 1 2.07 1.31 2.35 1.46.28.14.45.12.62-.07.17-.2.72-.84.91-1.13.2-.28.39-.24.66-.14.27.1 1.72.81 2.01.95.3.14.49.21.56.32.07.12.07.68-.16 1.32Z"/></svg>
+    <span>WhatsApp</span>
+  </a>
 </nav>
 
 <!-- ═══════════ HOME ═══════════ -->
@@ -367,7 +375,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
           <div class="pcard-body">
             <h3>Laranja Pera</h3>
             <p>Casca fina e lisa, polpa suculenta, sabor adocicado e sem acidez. Indicada para todas as idades, inclusive bebês e idosos.</p>
-            <div class="pcard-link" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</div>
+            <button class="pcard-link" type="button" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</button>
           </div>
         </div>
 
@@ -376,7 +384,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
           <div class="pcard-body">
             <h3>Laranja Lima</h3>
             <p>A variedade menos ácida, muito recomendada para bebês. Casca fina amarelo-claro, sabor suave, doce e polpa muito suculenta.</p>
-            <div class="pcard-link" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</div>
+            <button class="pcard-link" type="button" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</button>
           </div>
         </div>
 
@@ -385,7 +393,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
           <div class="pcard-body">
             <h3>Limão Tahiti</h3>
             <p>Lima ácida verde intenso, sem sementes, fruto ovalado. Disponível durante todo o ano com melhor safra entre maio e novembro.</p>
-            <div class="pcard-link" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</div>
+            <button class="pcard-link" type="button" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</button>
           </div>
         </div>
 
@@ -394,7 +402,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
           <div class="pcard-body">
             <h3>Tangerina Ponkan</h3>
             <p>A mais famosa do Brasil. Frutos grandes, fáceis de descascar, com gomos que se separam facilmente. Sabor mais doce que as demais.</p>
-            <div class="pcard-link" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</div>
+            <button class="pcard-link" type="button" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</button>
           </div>
         </div>
 
@@ -403,7 +411,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
           <div class="pcard-body">
             <h3>Tangerina Murcott</h3>
             <p>Tangor de casca fina e aderente, formato arredondado, polpa laranja intensa e sabor marcante. Boa opção para consumo in natura e sucos.</p>
-            <div class="pcard-link" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</div>
+            <button class="pcard-link" type="button" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</button>
           </div>
         </div>
 
@@ -412,7 +420,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
           <div class="pcard-body">
             <h3>Manga Palmer</h3>
             <p>Variedade alongada, de casca avermelhada e polpa firme, doce e com baixa fibra. Indicada para varejo e consumo in natura.</p>
-            <div class="pcard-link" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</div>
+            <button class="pcard-link" type="button" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</button>
           </div>
         </div>
 
@@ -421,7 +429,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
           <div class="pcard-body">
             <h3>Manga Tommy Atkins</h3>
             <p>Variedade de boa resistência, casca com tons de vermelho, verde e amarelo, polpa firme e ótima apresentação comercial.</p>
-            <div class="pcard-link" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</div>
+            <button class="pcard-link" type="button" onclick="go('contato',document.querySelectorAll('.nav-tab')[3])">Solicitar cotação →</button>
           </div>
         </div>
 
@@ -701,6 +709,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);}
           </div>
           <div class="fg"><label>Mensagem</label><textarea placeholder="Volume aproximado, cidade de entrega e frequência desejada..." id="fmsg"></textarea></div>
           <button class="btn-form" onclick="envWpp()">Enviar pelo WhatsApp 🍊</button>
+          <p class="privacy-note">Ao enviar, você será direcionado ao WhatsApp. As informações preenchidas não ficam armazenadas neste site.</p>
         </div>
       </div>
     </div>
@@ -754,7 +763,9 @@ function envWpp() {
           (p ? '\n*Produto:* ' + p : '') +
           (m ? '\n*Mensagem:* ' + m : '') +
           '\n\nVim pelo site e gostaria de uma cota\u00e7\u00e3o!';
-  window.open('https://wa.me/5519974117676?text=' + encodeURIComponent(t), '_blank');
+  var url = 'https://wa.me/5519974117676?text=' + encodeURIComponent(t);
+  var janela = window.open(url, '_blank', 'noopener,noreferrer');
+  if (janela) janela.opener = null;
 }
 </script>
 </body>
